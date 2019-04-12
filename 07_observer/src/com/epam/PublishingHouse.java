@@ -31,9 +31,9 @@ public class PublishingHouse implements Provider {
     public void publishPaper() {
 
         Paper paper = new Paper(paperId++);
+        System.out.println("Publishing House: release " + paper);
         for (Subscriber subscriber : subscribers) {
             subscriber.update(paper);
         }
-        System.out.println("Publishing House: release " + paper);
     }
 }

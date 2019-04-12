@@ -16,8 +16,9 @@ public class Post implements Provider, Subscriber {
     private Paper paper;
 
     public Post(Provider provider) {
-        this.provider = provider;
         this.id = count++;
+        this.provider = provider;
+        this.provider.addSubscriber(this);
     }
 
     @Override

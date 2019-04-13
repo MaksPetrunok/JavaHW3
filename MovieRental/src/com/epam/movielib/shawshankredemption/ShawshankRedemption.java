@@ -12,13 +12,13 @@ public class ShawshankRedemption extends Movie {
     @Override
     public boolean setAudioTrack(Language language) {
 
-        boolean languageSet = true;
+        boolean audioLanguageSet = true;
         switch (language) {
             case ENGLISH: this.audioTrack = new ShawshankRedemptionAudioEnglish(); break;
             case UKRAINIAN: this.audioTrack = new ShawshankRedemptionAudioUkrainian(); break;
-            default: languageSet = false;
+            default: audioLanguageSet = false;
         }
-        return languageSet;
+        return audioLanguageSet;
     }
 
     @Override

@@ -3,6 +3,7 @@ package com.epam.movie;
 import com.epam.Language;
 import com.epam.movielib.diehard.DieHard;
 import com.epam.movielib.shawshankredemption.ShawshankRedemption;
+import com.epam.rental.MovieRental;
 
 public abstract class Movie {
 
@@ -23,12 +24,11 @@ public abstract class Movie {
     }
 
     public static Movie getMovie(String title) {
-
         switch (title.toLowerCase()) {
             case "die hard": return new DieHard();
             case "shawshank redemption": return new ShawshankRedemption();
-            default: throw new IllegalArgumentException("Movie '" + title + "' not found.");
         }
+        throw new IllegalArgumentException("Movie '" + title + "' not found.");
     }
 
     public abstract boolean setAudioTrack(Language language);
